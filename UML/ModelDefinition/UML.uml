@@ -1,0 +1,1384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="e5508d91-7520-4f0f-9257-ca0dd84bdf37"
+  name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="51bfce3a-e085-4399-8d00-8bad836f4399">
+      <body>Contains all projects/activities, contacts, partner organization related information </body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="b9774cc8-e4be-4969-a3b6-527219c7e113"
+          LastKnownName="View Admin Dashboard "
+          LastKnownLocation="UML.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="7af24fe0-3ac0-46d4-b2ed-7b1d8e08979e">
+      <body>Contains all projects/activities that the user is involved in</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="41ec3789-4ffc-4024-962e-efc6748beca0"
+          LastKnownName="View User Dashboard"
+          LastKnownLocation="UML.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="2144ab29-0f17-44bc-a6f3-14ec518f628e"
+        name="ContactType"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="759f7865-c506-4363-812c-ce015430c570"
+            isDerived="false"
+            sourceEndRoleName="ContactType"
+            targetEndRoleName="Contact"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d3156368-1cc0-4974-8fef-f5b0d31eab2d"
+              LastKnownName="Contact"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25d34d58-043f-4d10-ab3b-88803a6ffa85"
+                  name="ContactType"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6dfcd88c-49fa-4b91-bf58-5d17161d88ae"
+                  name="Contact"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="448e386b-cad2-44e1-87df-d58805476385"
+                      name="Lower"
+                      value="M" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ecbdef29-5e22-43a7-bbcf-36ec2746f8df"
+                      name="Upper"
+                      value="M" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d3156368-1cc0-4974-8fef-f5b0d31eab2d"
+        name="Contact"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="f712cdf2-0636-4dc9-81a3-2a8eb9771392"
+            isDerived="false"
+            sourceEndRoleName="Contact"
+            targetEndRoleName="PartnerOrganization"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="114a2a2a-e425-47b9-8423-3095b30e0a80"
+              LastKnownName="PartnerOrganization"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2520d403-a862-4a6e-bf01-88a87910a766"
+                  name="Contact"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f9cde165-48c3-4878-ae31-bc18f2340660"
+                      name="Lower"
+                      value="M" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="dca7185c-b00e-4049-aa8a-a738ec59c487"
+                      name="Upper"
+                      value="M" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3f5f9a73-8d33-4c0d-ad4b-e9a458487c10"
+                  name="PartnerOrganization"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5a92dfb3-c0c7-4262-a364-0e9faba9ed7f"
+                      name="Lower"
+                      value="1 or 0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="67d55d67-e083-4a57-aa4a-3d4d16f7582e"
+                      name="Upper"
+                      value="1 or 0" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6a1e2757-0f5d-41e8-b472-176c70abeae0"
+            isDerived="false"
+            sourceEndRoleName="Contact"
+            targetEndRoleName="ContactOfProject"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e08df369-8769-428d-9c47-61e252e7c5e2"
+              LastKnownName="ContactOfProject"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d9cc0d62-a44a-4b42-b8aa-94bd0937298d"
+                  name="Contact"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8752ce2b-32fc-4cf2-8018-4a2ce83ccf9f"
+                  name="ContactOfProject"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e0ee077e-1a3a-4fc3-910d-747cbd489b90"
+                      name="Lower"
+                      value="0 or M" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e86f3633-bbff-4f36-a1b7-75737199e04c"
+                      name="Upper"
+                      value="0 or M" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a39d5355-ac58-4b18-8372-26192019f0b7"
+            isDerived="false"
+            sourceEndRoleName="Contact"
+            targetEndRoleName="ContactOfActivity"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0581eb32-24a1-4b8c-aabb-27bb1491548b"
+              LastKnownName="ContactOfActivity"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d24996f3-07b1-4fe0-97cf-c5b08d44cf6a"
+                  name="Contact"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="804d0c6f-0c61-43bb-b174-c395d8a6e854"
+                  name="ContactOfActivity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="12ec8e20-19a4-42ba-a635-b55f26a31d6b"
+                      name="Lower"
+                      value="0 or M" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ce4fd1f8-85bd-4c5c-8846-cbd37d9e0b22"
+                      name="Upper"
+                      value="0 or M" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ebe4379b-41f1-43d1-98cb-4fdaed4a5506"
+        name="Project"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="bc6da88e-45c8-4a1a-bc57-ed3ccd1306c1"
+            isDerived="false"
+            sourceEndRoleName="Project"
+            targetEndRoleName="ContactOfProject"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e08df369-8769-428d-9c47-61e252e7c5e2"
+              LastKnownName="ContactOfProject"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c40dbb55-f237-4281-bf46-ecbc8e760326"
+                  name="Project"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d6883b21-0dd8-490f-ab7c-66fa9d66997e"
+                  name="ContactOfProject"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="88388088-e66e-4b8d-90cc-f41e5b88c6de"
+                      name="Lower"
+                      value="M" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a01cb5e2-6505-48cc-b9d2-caada7920897"
+                      name="Upper"
+                      value="M" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="457557a3-8606-4e15-b6e1-14bab464e48c"
+        name="Activity"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="95308a8d-9be6-4738-9dd4-9b3b5decb084"
+            isDerived="false"
+            sourceEndRoleName="Activity"
+            targetEndRoleName="ContactOfActivity"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0581eb32-24a1-4b8c-aabb-27bb1491548b"
+              LastKnownName="ContactOfActivity"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="520d849c-26b2-48be-9149-92b89ca5d63e"
+                  name="Activity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b6a031e5-ef27-4735-a0cf-b649cee26014"
+                  name="ContactOfActivity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9398cdf8-fb13-4dab-a7ff-aaf49aeb27b5"
+                      name="Lower"
+                      value="M" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a774d1f2-db32-4394-b361-1e60461d3bd2"
+                      name="Upper"
+                      value="M" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="114a2a2a-e425-47b9-8423-3095b30e0a80"
+        name="PartnerOrganization"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e08df369-8769-428d-9c47-61e252e7c5e2"
+        name="ContactOfProject"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0581eb32-24a1-4b8c-aabb-27bb1491548b"
+        name="ContactOfActivity"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="1e5e8a89-c4db-4c64-974e-f2888375ab08"
+        name="Admin Staff Member"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a0e4f691-6ce1-4a3e-b914-bb78576de371"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Manage Contacts"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f46403d5-a68a-43c1-8865-336bdc2762b7"
+              LastKnownName="Manage Contacts"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b5433320-b7d4-49ee-92b3-beecf0513641"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5ee3f625-c1a0-452c-9a64-f40f79fcecc7"
+                  name="Manage Contacts"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2cb0dff0-a0be-4f02-a4fd-0265401abb60"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Manage Contact Types"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7cb82b51-ac5f-47cf-8100-822fff0d5638"
+              LastKnownName="Add Contact Types"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="577f135f-2982-438e-8793-41b6f830cdfd"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="13ef61fd-cc32-4ba5-a60a-6df9eddcfc87"
+                  name="Manage Contact Types"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a1be19d6-21c1-46bb-bc5c-58468177edf4"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Manage Partner Organizations"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c6a84f8b-017a-4fe7-8531-2a9dba7f1fdf"
+              LastKnownName="Manage Partner Organizations"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="08e839ec-bd5e-4a37-a4a2-c85506e2cbb5"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ae103630-75ad-42bb-981e-bba7586f90df"
+                  name="Manage Partner Organizations"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8df6cde7-fcaa-4b58-bec5-74d45c130455"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Manage Projects"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d3838c56-8cd1-4280-a937-bf75b0b928e6"
+              LastKnownName="Manage Projects/Activities "
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e4928285-75f2-454b-b6a7-993d919bd96d"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9cbbc901-d212-4670-81e6-09e69c0ac10e"
+                  name="Manage Projects"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="70748799-f275-4d75-ad07-ccd1a3247870"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Manage Profile"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e2bce20f-2cc9-4c8b-bcf3-bdd7d4d01a4b"
+              LastKnownName="Manage Profile"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4d619df5-20f2-40a6-8c7b-720881b1421b"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a4e32a0e-0cdb-41be-955f-d3c3c022a797"
+                  name="Manage Profile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c4f2dd96-3981-472f-b974-378b569626bd"
+            isDerived="false"
+            sourceEndRoleName="Admin"
+            targetEndRoleName="Manage Activies "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="63afbda8-de62-4cab-a11c-06886e5ec10d"
+              LastKnownName="Manage Activies "
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6b1b1b36-221e-4ebc-9dcf-ea9d765eb146"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e668703-2701-4afb-a544-a2fd8ad2ed62"
+                  name="Manage Activies "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d6fc9bea-667f-4a03-9a56-0aa104ebe835"
+            isDerived="false"
+            sourceEndRoleName="Admin Staff Member"
+            targetEndRoleName="View Admin Dashboard "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b9774cc8-e4be-4969-a3b6-527219c7e113"
+              LastKnownName="View Admin Dashboard "
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cc11acbc-be8d-4fa6-bb6d-2038d17fc7fa"
+                  name="Admin Staff Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b31ccac1-571c-499f-a42c-cd64b0996cdc"
+                  name="View Admin Dashboard "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f46403d5-a68a-43c1-8865-336bdc2762b7"
+        name="Manage Contacts"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7cb82b51-ac5f-47cf-8100-822fff0d5638"
+        name="Add Contact Types"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c6a84f8b-017a-4fe7-8531-2a9dba7f1fdf"
+        name="Manage Partner Organizations"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d3838c56-8cd1-4280-a937-bf75b0b928e6"
+        name="Manage Projects/Activities "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="63afbda8-de62-4cab-a11c-06886e5ec10d"
+        name="Manage Activies "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2d988985-e341-4137-8ccf-1532e81ac4ad"
+        name="Approve Registration"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="01423dd3-4d11-4b80-b9b0-3087f6a74abd">
+            <useCaseMoniker
+              Id="f46403d5-a68a-43c1-8865-336bdc2762b7"
+              LastKnownName="Manage Contacts"
+              LastKnownLocation="UML.uml" />
+          </extend>
+          <extend
+            Id="641fba05-344f-48fb-9b5a-1a5a7e85f429">
+            <useCaseMoniker
+              Id="3db24985-bf06-4c74-bac1-2aee9be05fd0"
+              LastKnownName="Register"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b68beff9-3044-43a6-8033-6bad29903989"
+        name="Edit Contact"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="274f1e09-0f73-4e32-a6a8-f5cd929a6e04">
+            <useCaseMoniker
+              Id="f46403d5-a68a-43c1-8865-336bdc2762b7"
+              LastKnownName="Manage Contacts"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1e8c9fed-b75f-4f15-9f76-64a57fb92096"
+        name="Disable Contact"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="17d907a0-9741-472c-969a-4d4ebdc67479">
+            <useCaseMoniker
+              Id="f46403d5-a68a-43c1-8865-336bdc2762b7"
+              LastKnownName="Manage Contacts"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="822e42ed-7195-4cac-9418-779909abff2e"
+        name="Add Contact Types"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7cad7a11-47ed-4fa8-9809-f7d2f004631e"
+        name="Edit Contact Types"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ac1e773f-94e9-4811-89d1-1c067dcbd123"
+        name="Dsiable Contact Types"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e2bce20f-2cc9-4c8b-bcf3-bdd7d4d01a4b"
+        name="Manage Profile"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b1c2c041-2857-46e8-b235-37aa7c016963"
+        name="Change Password"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="ee55963a-fbaf-44a2-9127-de822628ea4a">
+            <useCaseMoniker
+              Id="e2bce20f-2cc9-4c8b-bcf3-bdd7d4d01a4b"
+              LastKnownName="Manage Profile"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="af91c738-d2d6-4d83-a0a1-196d8fce2e86"
+        name="Manage Profile Information"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="aefd134a-33f5-43ce-8a9f-b80ff8c19410">
+            <useCaseMoniker
+              Id="e2bce20f-2cc9-4c8b-bcf3-bdd7d4d01a4b"
+              LastKnownName="Manage Profile"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="de1d878e-776b-4fd8-b4fe-0c4066329e3d"
+        name="Add Partner Organizations"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="9978e0cf-f2fb-4ba1-a2e7-f444b6e8033a">
+            <useCaseMoniker
+              Id="c6a84f8b-017a-4fe7-8531-2a9dba7f1fdf"
+              LastKnownName="Manage Partner Organizations"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cade0e51-bc80-4e8f-9b36-44ad648397b6"
+        name="Edit Partner Organizations"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="3ed6aaba-010d-4974-970b-bf98d96636b7">
+            <useCaseMoniker
+              Id="c6a84f8b-017a-4fe7-8531-2a9dba7f1fdf"
+              LastKnownName="Manage Partner Organizations"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e89ec438-f0fe-4811-a114-380dbbfb3ad7"
+        name="Dsiable Partner Organizations"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="fe7d1184-094e-435a-ad57-1e4c3101b07c">
+            <useCaseMoniker
+              Id="c6a84f8b-017a-4fe7-8531-2a9dba7f1fdf"
+              LastKnownName="Manage Partner Organizations"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="19bbe51d-0cf6-4c95-aed9-233d394b8229"
+        name="Create Project/Activity"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="a98f113b-d3a5-42a0-8797-4e593c6fc460">
+            <useCaseMoniker
+              Id="d3838c56-8cd1-4280-a937-bf75b0b928e6"
+              LastKnownName="Manage Projects/Activities "
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="82a77f07-18e1-4d34-bf9e-e0f41173bce6">
+            <useCaseMoniker
+              Id="aa7ca5ba-285d-45bd-8bb2-f1879f8c7e03"
+              LastKnownName="Request to create a project"
+              LastKnownLocation="UML.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="430452a1-4514-4a49-b08e-a53dd11b8447"
+        name="Approve Update of Project/Activity"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="22075aca-2a0c-4752-aca1-e83fd191a93c">
+            <useCaseMoniker
+              Id="d3838c56-8cd1-4280-a937-bf75b0b928e6"
+              LastKnownName="Manage Projects/Activities "
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="4b691318-1405-4ddc-a897-c0c4307aba21">
+            <useCaseMoniker
+              Id="479e4b1c-8cc7-4a91-bf5c-2fa71a778e4b"
+              LastKnownName="Add Users to Project "
+              LastKnownLocation="UML.uml" />
+          </include>
+          <include
+            Id="954bec76-0321-488f-804c-f17fb639e228">
+            <useCaseMoniker
+              Id="9a24d56c-7a7e-436e-9b8f-1253b6269fda"
+              LastKnownName="Update  project Progress/Status"
+              LastKnownLocation="UML.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="87346278-a1c9-4853-b263-738a9d0809a3"
+        name="Complete Project/Activity"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="63c6e534-55af-4e6b-b5fb-f9f81e2ca12c">
+            <useCaseMoniker
+              Id="d3838c56-8cd1-4280-a937-bf75b0b928e6"
+              LastKnownName="Manage Projects/Activities "
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="43cc9911-def3-4a2a-b708-9e5961767682"
+        name="Project Owner Staff Member"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="a4fdffd8-d09d-49e6-9817-464511c9670a"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="6a0aa9ab-af1e-4432-a863-d22e927f0f2f"
+              LastKnownName="Contact"
+              LastKnownLocation="UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="352d7927-ffc3-4ed6-ac32-dbae89dcaf63"
+            isDerived="false"
+            sourceEndRoleName="Normal Staff Member"
+            targetEndRoleName="Request to create a project"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="aa7ca5ba-285d-45bd-8bb2-f1879f8c7e03"
+              LastKnownName="Request to create a project"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8ab43874-8996-47f1-9235-ebf561cb1aee"
+                  name="Normal Staff Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f0f4362b-5aff-4cc8-b3cd-cc72757c918a"
+                  name="Request to create a project"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9aa9d7de-6bce-4bfd-89f7-709fe200481a"
+            isDerived="false"
+            sourceEndRoleName="Normal Staff Member"
+            targetEndRoleName="Update  project Progress"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="9a24d56c-7a7e-436e-9b8f-1253b6269fda"
+              LastKnownName="Update  project Progress/Status"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93dbf676-4292-4914-8c27-8898d434e6c1"
+                  name="Normal Staff Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e08f453-de4e-4018-ba78-05d803a4978b"
+                  name="Update  project Progress"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1b4a86b8-704b-4675-bf0d-2d2cfd9fd022"
+            isDerived="false"
+            sourceEndRoleName="Normal Staff Member"
+            targetEndRoleName="Add Users to Project "
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="479e4b1c-8cc7-4a91-bf5c-2fa71a778e4b"
+              LastKnownName="Add Users to Project "
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="76dabea1-7f31-40af-a753-b064872a0937"
+                  name="Normal Staff Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6f3c4424-affe-45a7-b4a6-b3dce7aaefbf"
+                  name="Add Users to Project "
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3db24985-bf06-4c74-bac1-2aee9be05fd0"
+        name="Register"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c97ed31c-2002-4414-8df5-19baf9ab6d25"
+        name="Activate Account"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7edd4306-026a-4bb4-be82-c25cbc19ecf5">
+            <useCaseMoniker
+              Id="2d988985-e341-4137-8ccf-1532e81ac4ad"
+              LastKnownName="Approve Registration"
+              LastKnownLocation="UML.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b9774cc8-e4be-4969-a3b6-527219c7e113"
+        name="View Admin Dashboard "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aa7ca5ba-285d-45bd-8bb2-f1879f8c7e03"
+        name="Request to create a project"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9a24d56c-7a7e-436e-9b8f-1253b6269fda"
+        name="Update  project Progress/Status"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="479e4b1c-8cc7-4a91-bf5c-2fa71a778e4b"
+        name="Add Users to Project "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="41ec3789-4ffc-4024-962e-efc6748beca0"
+        name="View User Dashboard"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6a0aa9ab-af1e-4432-a863-d22e927f0f2f"
+        name="Contact"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f2649763-d4a7-4dbd-90b0-ae33618cfd18"
+            isDerived="false"
+            sourceEndRoleName="Normal Contact"
+            targetEndRoleName="Register"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3db24985-bf06-4c74-bac1-2aee9be05fd0"
+              LastKnownName="Register"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a361631e-3efd-4ee1-bec0-1b8010989bba"
+                  name="Normal Contact"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="419ad2c8-e7f6-443b-bac1-8f9bd616cbc9"
+                  name="Register"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="07948670-39df-4658-be2a-d64a7345109e"
+            isDerived="false"
+            sourceEndRoleName="Normal Contact"
+            targetEndRoleName="Activate Account"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c97ed31c-2002-4414-8df5-19baf9ab6d25"
+              LastKnownName="Activate Account"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9447689-29b8-4cf2-897f-4e16c3745453"
+                  name="Normal Contact"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2292bca9-cd99-4e62-b04f-c3db47fbcc3d"
+                  name="Activate Account"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9f6d234c-944b-47bc-89de-b4f2d09fef2b"
+            isDerived="false"
+            sourceEndRoleName="Normal Contact"
+            targetEndRoleName="View User Dashboard"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="41ec3789-4ffc-4024-962e-efc6748beca0"
+              LastKnownName="View User Dashboard"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="40b4768c-c031-4fc2-bfb1-a0a646782fb5"
+                  name="Normal Contact"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="68d410bf-5bd9-4225-88c4-99d7fd563ce5"
+                  name="View User Dashboard"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="28d38a44-43cf-4799-89d8-0350449c328b"
+            isDerived="false"
+            sourceEndRoleName="Contact"
+            targetEndRoleName="Manage Profile"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e2bce20f-2cc9-4c8b-bcf3-bdd7d4d01a4b"
+              LastKnownName="Manage Profile"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5d145475-4b53-443c-bd69-664fe06de720"
+                  name="Contact"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d3cd1e8-741b-4c7d-bef8-fbf02ccc4ee9"
+                  name="Manage Profile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

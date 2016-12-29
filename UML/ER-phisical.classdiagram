@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="aa2a03ff-fbb2-4eb0-b10f-baf2a6af558d" name="ER-phisical" linkedPackageId="1f30e660-0424-4312-a2a6-2e3b12871f73" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="d937017f-3d10-4e43-92f1-e25edd80b37f">
+      <profileInstance Id="2e8b4549-86e4-4cf0-804c-59da92537006" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2d59f4bd-65a4-4a0a-b660-1e72cc8ce8e7">
+      <profileInstance Id="c37251f2-8153-454c-9c8e-83520531f052" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6b4c892c-7451-4b98-a722-28a436d4fb58" name="ContactType" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2144ab29-0f17-44bc-a6f3-14ec518f628e" />
+        <targetEnds>
+          <association Id="86b8fa8c-ca61-4be6-a45e-60ec3511f0e6" isDerived="false" sourceEndRoleName="ContactType" targetEndRoleName="Contact" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c603cc25-3f3b-4155-ac22-3b2b7323efca" LastKnownName="Contact" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2400c0f2-93e5-4e79-ad94-17a254bbab38" name="ContactType" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="25d34d58-043f-4d10-ab3b-88803a6ffa85" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b25fc805-b114-4d98-abfa-1cd4d4a67e85" name="Contact" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="209418eb-2d36-479a-8090-6cc2e1fb949d" name="Lower" value="M">
+                      <elementDefinition Id="448e386b-cad2-44e1-87df-d58805476385" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="12225c9b-2fcd-4a22-aa67-015285392f03" name="Upper" value="M">
+                      <elementDefinition Id="ecbdef29-5e22-43a7-bbcf-36ec2746f8df" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="6dfcd88c-49fa-4b91-bf58-5d17161d88ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="759f7865-c506-4363-812c-ce015430c570" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c603cc25-3f3b-4155-ac22-3b2b7323efca" name="Contact" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d3156368-1cc0-4974-8fef-f5b0d31eab2d" />
+        <targetEnds>
+          <association Id="ae3bac1d-6b17-4df2-a7a6-762cb6fb1b32" isDerived="false" sourceEndRoleName="Contact" targetEndRoleName="PartnerOrganization" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d87158ed-ab7b-48de-a40f-3f93d1ca9e57" LastKnownName="PartnerOrganization" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9fc2b0d9-6c1c-422a-b9d5-72467d882c9e" name="Contact" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="3272084c-0aed-4137-81f4-b01f99c84ba0" name="Lower" value="M">
+                      <elementDefinition Id="f9cde165-48c3-4878-ae31-bc18f2340660" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="8a7f268a-4500-4c47-ab7d-2cbbf68e64cb" name="Upper" value="M">
+                      <elementDefinition Id="dca7185c-b00e-4049-aa8a-a738ec59c487" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2520d403-a862-4a6e-bf01-88a87910a766" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a04d4fb-c63f-4072-8bd3-ef7bcde4682e" name="PartnerOrganization" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="b6697e2d-2edc-4005-aaf4-eaf110432ba0" name="Lower" value="1 or 0">
+                      <elementDefinition Id="5a92dfb3-c0c7-4262-a364-0e9faba9ed7f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b0d194c7-0b87-4b9c-9a03-1d09e3bed501" name="Upper" value="1 or 0">
+                      <elementDefinition Id="67d55d67-e083-4a57-aa4a-3d4d16f7582e" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="3f5f9a73-8d33-4c0d-ad4b-e9a458487c10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f712cdf2-0636-4dc9-81a3-2a8eb9771392" />
+          </association>
+          <association Id="efa2612a-2e42-470e-a57e-b3ae77a5d716" isDerived="false" sourceEndRoleName="Contact" targetEndRoleName="ContactOfProject" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b10a29bd-4fec-4bca-a4f5-8d3a5a5dac88" LastKnownName="ContactOfProject" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="704b056e-952e-4937-9dff-03ef3aa58eb3" name="Contact" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d9cc0d62-a44a-4b42-b8aa-94bd0937298d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="10ae5988-8705-478e-8caf-8652ee48cadc" name="ContactOfProject" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="8843914c-f003-463b-bfd6-d2e31a8c670e" name="Lower" value="0 or M">
+                      <elementDefinition Id="e0ee077e-1a3a-4fc3-910d-747cbd489b90" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="bcd80471-d554-48cf-8bd6-bc9b1a24840d" name="Upper" value="0 or M">
+                      <elementDefinition Id="e86f3633-bbff-4f36-a1b7-75737199e04c" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="8752ce2b-32fc-4cf2-8018-4a2ce83ccf9f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6a1e2757-0f5d-41e8-b472-176c70abeae0" />
+          </association>
+          <association Id="ca3cc30f-55b0-4050-a74c-f03cb84275e6" isDerived="false" sourceEndRoleName="Contact" targetEndRoleName="ContactOfActivity" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5d495776-de2f-465b-9259-0d9390d8e63f" LastKnownName="ContactOfActivity" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6904aa48-f883-4eca-b79c-6500c6761ee1" name="Contact" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d24996f3-07b1-4fe0-97cf-c5b08d44cf6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fbbcc85a-52c2-4b8f-9bda-3b5262e59952" name="ContactOfActivity" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="d4f174d6-e87d-4048-b4f5-a474cf12052b" name="Lower" value="0 or M">
+                      <elementDefinition Id="12ec8e20-19a4-42ba-a635-b55f26a31d6b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="16f5bd84-89f3-41b1-8419-8105d7c38f5f" name="Upper" value="0 or M">
+                      <elementDefinition Id="ce4fd1f8-85bd-4c5c-8846-cbd37d9e0b22" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="804d0c6f-0c61-43bb-b174-c395d8a6e854" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a39d5355-ac58-4b18-8372-26192019f0b7" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e6733722-fc56-4648-b474-57323a5e0bc6" name="Project" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ebe4379b-41f1-43d1-98cb-4fdaed4a5506" />
+        <targetEnds>
+          <association Id="2b225dce-394c-49d0-8eb7-b5fa022f1649" isDerived="false" sourceEndRoleName="Project" targetEndRoleName="ContactOfProject" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b10a29bd-4fec-4bca-a4f5-8d3a5a5dac88" LastKnownName="ContactOfProject" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="83491fed-bbaf-4710-a159-6fea55dbeae2" name="Project" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c40dbb55-f237-4281-bf46-ecbc8e760326" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f1d31a41-2409-472b-892b-31733bfe1e92" name="ContactOfProject" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="cd465d23-604a-4eba-b077-96ffc9b0b61f" name="Lower" value="M">
+                      <elementDefinition Id="88388088-e66e-4b8d-90cc-f41e5b88c6de" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c221f3d2-a055-43f0-81a3-f8195c26febd" name="Upper" value="M">
+                      <elementDefinition Id="a01cb5e2-6505-48cc-b9d2-caada7920897" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="d6883b21-0dd8-490f-ab7c-66fa9d66997e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bc6da88e-45c8-4a1a-bc57-ed3ccd1306c1" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3775a12f-7843-4ef5-a1a0-dbcae75895cf" name="Activity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="457557a3-8606-4e15-b6e1-14bab464e48c" />
+        <targetEnds>
+          <association Id="ce258d6b-886e-4dca-a12e-f728303d2f10" isDerived="false" sourceEndRoleName="Activity" targetEndRoleName="ContactOfActivity" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5d495776-de2f-465b-9259-0d9390d8e63f" LastKnownName="ContactOfActivity" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0cfd2926-5bff-403d-8e69-d6f5f85e21bd" name="Activity" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="520d849c-26b2-48be-9149-92b89ca5d63e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0091f81a-a723-4a0b-94b5-32d9816e674a" name="ContactOfActivity" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="1200cbd0-5b1e-4fc4-9055-8cbd6a1493ff" name="Lower" value="M">
+                      <elementDefinition Id="9398cdf8-fb13-4dab-a7ff-aaf49aeb27b5" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4674e14b-1759-484f-9fb7-9f70de19682b" name="Upper" value="M">
+                      <elementDefinition Id="a774d1f2-db32-4394-b361-1e60461d3bd2" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b6a031e5-ef27-4735-a0cf-b649cee26014" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="95308a8d-9be6-4738-9dd4-9b3b5decb084" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d87158ed-ab7b-48de-a40f-3f93d1ca9e57" name="PartnerOrganization" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="114a2a2a-e425-47b9-8423-3095b30e0a80" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b10a29bd-4fec-4bca-a4f5-8d3a5a5dac88" name="ContactOfProject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e08df369-8769-428d-9c47-61e252e7c5e2" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5d495776-de2f-465b-9259-0d9390d8e63f" name="ContactOfActivity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0581eb32-24a1-4b8c-aabb-27bb1491548b" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="1f30e660-0424-4312-a2a6-2e3b12871f73" name="UML">
+    <elementDefinition Id="e5508d91-7520-4f0f-9257-ca0dd84bdf37" />
+  </package>
+</logicalClassDesignerModel>
