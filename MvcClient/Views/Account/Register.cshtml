@@ -3,35 +3,160 @@
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
+    @Html.AntiForgeryToken()    
     <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    @Html.ValidationSummary(true, "Please fix the below errors", new { @class = "text-danger" })
+    
+
+
+
+
+    @*login information for the account*@
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            User Profile Information
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        <div class="panel-body">
+            <div class="form-group">
+                @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })                    
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.FirstName)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.LastName)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.AddressLine1, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.AddressLine1, new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.AddressLine1)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.AddressLine2, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.AddressLine2, new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.AddressLine2)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.AddressLine3, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.AddressLine3, new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.AddressLine3)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Postcode, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.Postcode, new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.Postcode)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CountyOrRegion, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.CountyOrRegion, new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.CountyOrRegion)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Country, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.DropDownListFor(m => m.Countries,
+                                                new SelectList(Model.Countries, "CountryCode", "CountryName"),
+                                                "--- select country ---",                                                
+                                                new { @class = "form-control" })                   
+
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.Country)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.ContactTypeId, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.DropDownListFor(m => m.ContactTypes,
+                                                new SelectList(Model.ContactTypes, "Id", "TypeName"),
+                                                "--- select contact type ---",
+                                                new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.ContactTypeId)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.VolunteerInterests, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.TextAreaFor(m => m.VolunteerInterests, new { @class = "form-control" })
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+
+        <div class="panel-heading">
+            Login Information
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
+        <div class="panel-body">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                <div class="col-md-3">
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                </div>
+                <div class="col-md-7">
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-1">
+                    <input type="submit" class="btn btn-primary" value="Register" />
+                </div>
+                <div class="col-md-1">
+                    <input type="reset" class="btn btn-default" value="Reset" />
+                </div>
+            </div>
         </div>
     </div>
 }

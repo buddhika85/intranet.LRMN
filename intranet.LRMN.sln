@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcClient", "MvcClient\MvcC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistance", "Persistance\Persistance.csproj", "{F35CD1CE-8334-45CE-870B-C27DA18E1588}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{B6B1A2BA-72C9-4351-8105-3BCD6CB541F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F35CD1CE-8334-45CE-870B-C27DA18E1588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F35CD1CE-8334-45CE-870B-C27DA18E1588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F35CD1CE-8334-45CE-870B-C27DA18E1588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B1A2BA-72C9-4351-8105-3BCD6CB541F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B1A2BA-72C9-4351-8105-3BCD6CB541F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B1A2BA-72C9-4351-8105-3BCD6CB541F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B1A2BA-72C9-4351-8105-3BCD6CB541F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

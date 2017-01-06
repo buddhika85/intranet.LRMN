@@ -6,7 +6,7 @@ namespace Persistance
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        // application specific database trables
+        // application specific database tables
         public DbSet<ContactType> ContactTypes { get; set; }
 
 

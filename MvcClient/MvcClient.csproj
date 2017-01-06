@@ -297,6 +297,10 @@
       <Project>{F35CD1CE-8334-45CE-870B-C27DA18E1588}</Project>
       <Name>Persistance</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{B6B1A2BA-72C9-4351-8105-3BCD6CB541F8}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

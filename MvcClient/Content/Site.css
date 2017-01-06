@@ -79,9 +79,9 @@ h6,
 
 /* MVC validation styles */
 .validation-summary-errors, .field-validation-error  {
-    color:red;
+    color:#b94a48;
 }
 
 .input-validation-error {
-    border:1px solid red;
+    border:1px solid #b94a48;
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Util;
 
 namespace MvcClient.Controllers
 {
@@ -17,9 +18,11 @@ namespace MvcClient.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private UnitOfWork _uow;
 
         public AccountController()
         {
+            _uow = new UnitOfWork();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
@@ -139,7 +142,12 @@ namespace MvcClient.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            var registerViewModel = new RegisterViewModel
+            {
+                ContactTypes = _uow.ContactTypeRepository.GetAll(),
+                Countries = CountryInfo.GetCountries()
+            };
+            return View(registerViewModel);
         }
 
         //
