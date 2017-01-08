@@ -80,11 +80,32 @@ namespace MvcClient.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = SignInManager.PasswordSignIn(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    {
+                        return RedirectToAction("Index", "User");
+                        //return RedirectToLocal(returnUrl);
+                        //if (User.IsInRole("Admin"))
+                        //{
+                        //    return RedirectToAction("Dashboard", "Admin");
+                        //}
+                        //else if (User.IsInRole("ProjectOwner"))
+                        //{
+                        //    return RedirectToAction("Dashboard", "ProjectOwner");
+                        //}
+                        //else if (User.IsInRole("Contact"))
+                        //{
+                        //    return RedirectToAction("Dashboard", "Contact");
+                        //}
+                        //else
+                        //{
+                        //    ModelState.AddModelError("", "Invalid login attempt - User does not have a role - Contact LRMN Admin");
+                        //    return View(model);
+                        //}
+                    }
+
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

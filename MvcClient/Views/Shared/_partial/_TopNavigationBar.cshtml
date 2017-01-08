@@ -13,9 +13,25 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                @if (User.IsInRole("Admin"))
+                {
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Tasks  <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Admin Dashboard", "Dashboard", "Admin")</li>
+                            <li>@Html.ActionLink("Contact Management", "ContactMgmt", "Admin")</li>
+                            <li>@Html.ActionLink("Partner Organization Management", "PartnerOrganizationMgmt", "Admin")</li>
+                        </ul>                        
+                    </li>
+                }
+                else if (User.IsInRole("ProjectOwner"))
+                {
+                    <li>@Html.ActionLink("Project Owner Dashboard", "Dashboard", "ProjectOwner")</li>
+                }
+                else if (User.IsInRole("Contact"))
+                {
+                    <li>@Html.ActionLink("LRMN Contact Dashboard", "Dashboard", "Contact")</li>
+                }
             </ul>
             @Html.Partial("_LoginPartial")
         </div>

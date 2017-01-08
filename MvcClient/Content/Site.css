@@ -25,25 +25,25 @@ textarea {
 
 /* Bootstrap overrides - colors */
 .navbar-inverse {
-    background-color: #2dc487;
-    border-color: #2dc487;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
 }
 
-.navbar-inverse .navbar-nav > li > a {
-    color: #000000;
-}
+    .navbar-inverse .navbar-nav > li > a {
+        color: #ffffff;
+    }
 
-.navbar-inverse .navbar-brand {
-    color: #ffffff;
-}
+    .navbar-inverse .navbar-brand {
+        color: #ffffff;
+    }
 
 /* Bootstrap overrides - fonts */
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #ffffff;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
 }
 
 h1,
@@ -58,14 +58,14 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  line-height: 1.1;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
 }
 
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse 
-.navbar-nav > .open > a:focus {    
-    background-color: rgba(245, 20, 19, 0.88);
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    /*background-color: #26a673;*/
+    background-color: #808080;
 }
 
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
@@ -78,10 +78,10 @@ h6,
 }
 
 /* MVC validation styles */
-.validation-summary-errors, .field-validation-error  {
-    color:#b94a48;
+.validation-summary-errors, .field-validation-error {
+    color: #b94a48;
 }
 
 .input-validation-error {
-    border:1px solid #b94a48;
+    border: 1px solid #b94a48;
 }
