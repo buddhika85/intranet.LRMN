@@ -154,7 +154,7 @@
                     <input type="submit" class="btn btn-primary" value="Register" />
                 </div>
                 <div class="col-md-1">
-                    <input type="reset" class="btn btn-default" value="Reset" />
+                    <input type="reset" class="btn btn-default" value="Reset" id="resetBtn" />
                 </div>
             </div>
         </div>
@@ -163,4 +163,14 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#resetBtn').click(function () {
+                RemoveValidationErrors();
+            });            
+        });
+ 
+        
+    </script>
 }
