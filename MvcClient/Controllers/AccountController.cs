@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using AutoMapper;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MvcClient.Models;
 using Persistance;
 using Persistance.DomainModel;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -159,37 +161,48 @@ namespace MvcClient.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = Mapper.Map<RegisterViewModel, ApplicationUser>(model);
+
+                user.UserName = model.Email;
+                user.JoinDate = DateTime.Today;
+                //user.JoinTime = DateTime.Now.TimeOfDay;                user.UserLocked = false;
+                user.UserActive = false;
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
                     // creating a role and 
                     var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
-                    using (var roleManager = new RoleManager<IdentityRole>(roleStore))
-                    {
-                        await roleManager.CreateAsync(new IdentityRole("Admin"));
-                        await roleManager.CreateAsync(new IdentityRole("ProjectOwner"));
-                        await roleManager.CreateAsync(new IdentityRole("Contact"));
+                    return RedirectToAction("RegistrationComplete", "Home");
+                    //using (var roleManager = new RoleManager<IdentityRole>(roleStore))
+                    //{
+                    // add user roles initially
+                    //await roleManager.CreateAsync(new IdentityRole("Admin"));
+                    //await roleManager.CreateAsync(new IdentityRole("ProjectOwner"));
+                    //await roleManager.CreateAsync(new IdentityRole("Contact"));
 
-                        // assign role to user
-                        await UserManager.AddToRoleAsync(user.Id, "Admin");
+                    // assign role to user initially
+                    //await UserManager.AddToRoleAsync(user.Id, "Contact");
 
 
-                        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                    //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
-                        // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                        // Send an email with this link
-                        // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                        // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                        // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                    // Send an email with this link
+                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                        return RedirectToAction("Index", "Home");
-                    }
+                    //return RedirectToAction("RegistrationComplete", "Home");
+                    //}
                 }
                 AddErrors(result);
             }
 
+
             // If we got this far, something failed, redisplay form
+            model.Countries = CountryInfo.GetCountries();
+            model.ContactTypes = _uow.ContactTypeRepository.GetAll();
             return View(model);
         }
 

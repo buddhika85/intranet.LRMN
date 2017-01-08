@@ -73,6 +73,10 @@
     <Compile Include="Migrations\201701050451324_UpdatedApplicationUser.Designer.cs">
       <DependentUpon>201701050451324_UpdatedApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701080726429_ApplicationUserChanges.cs" />
+    <Compile Include="Migrations\201701080726429_ApplicationUserChanges.Designer.cs">
+      <DependentUpon>201701080726429_ApplicationUserChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork.cs" />
@@ -90,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701050451324_UpdatedApplicationUser.resx">
       <DependentUpon>201701050451324_UpdatedApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701080726429_ApplicationUserChanges.resx">
+      <DependentUpon>201701080726429_ApplicationUserChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

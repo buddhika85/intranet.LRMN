@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using AutoMapper;
+using MvcClient.App_Start;
+using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -9,7 +11,9 @@ namespace MvcClient
     {
         protected void Application_Start()
         {
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+            Mapper.Initialize(c => c.AddProfile<MappingProfile>());         // Auto mapper
+            GlobalConfiguration.Configure(WebApiConfig.Register);           // Web API
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

@@ -23,7 +23,7 @@ namespace Persistance.DomainModel
 
         public DateTime JoinDate { get; set; }
 
-        public DateTime ContractEndDate { get; set; }
+        public DateTime? ContractEndDate { get; set; }
 
 
         public bool UserActive { get; set; }

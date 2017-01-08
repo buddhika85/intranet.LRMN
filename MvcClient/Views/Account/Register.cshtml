@@ -87,7 +87,7 @@
             <div class="form-group">
                 @Html.LabelFor(m => m.Country, new { @class = "col-md-2 control-label" })
                 <div class="col-md-3">
-                    @Html.DropDownListFor(m => m.Countries,
+                    @Html.DropDownListFor(m => m.Country,
                                                 new SelectList(Model.Countries, "CountryCode", "CountryName"),
                                                 "--- select country ---",                                                
                                                 new { @class = "form-control" })                   
@@ -100,7 +100,7 @@
             <div class="form-group">
                 @Html.LabelFor(m => m.ContactTypeId, new { @class = "col-md-2 control-label" })
                 <div class="col-md-3">
-                    @Html.DropDownListFor(m => m.ContactTypes,
+                    @Html.DropDownListFor(m => m.ContactTypeId,
                                                 new SelectList(Model.ContactTypes, "Id", "TypeName"),
                                                 "--- select contact type ---",
                                                 new { @class = "form-control" })
@@ -163,6 +163,7 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/Custom/globalJsFunctions")
     <script type="text/javascript">
         $(document).ready(function () {
 

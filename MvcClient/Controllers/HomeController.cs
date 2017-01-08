@@ -10,6 +10,12 @@ namespace MvcClient.Controllers
             return View();
         }
 
+        [AllowAnonymous]
+        public ActionResult RegistrationComplete()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
