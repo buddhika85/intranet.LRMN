@@ -60,6 +60,7 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="DomainModel\ApplicationUser.cs" />
     <Compile Include="DomainModel\ContactType.cs" />
+    <Compile Include="DomainModel\UserLogs.cs" />
     <Compile Include="GenericRepository.cs" />
     <Compile Include="Migrations\201701050227350_InitialModel.cs" />
     <Compile Include="Migrations\201701050227350_InitialModel.Designer.cs">

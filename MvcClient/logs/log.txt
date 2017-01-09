@@ -1,0 +1,12 @@
+INFO  2017-01-09 09:37:17,188   480ms LogAttribute           OnActionExecuting  - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - On Executing 
+INFO  2017-01-09 09:37:17,224   516ms LogAttribute           OnActionExecuted   - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - After Execution 
+INFO  2017-01-09 09:37:42,980 26272ms LogAttribute           OnActionExecuting  - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - On Executing 
+INFO  2017-01-09 09:37:45,084 28376ms LogAttribute           OnActionExecuted   - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - After Execution 
+INFO  2017-01-09 09:38:00,553 43845ms LogAttribute           OnActionExecuting  - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - On Executing 
+INFO  2017-01-09 09:38:00,554 43846ms LogAttribute           OnActionExecuted   - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - After Execution 
+INFO  2017-01-09 09:38:06,803 50096ms LogAttribute           OnActionExecuting  - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - On Executing 
+INFO  2017-01-09 09:38:07,233 50525ms LogAttribute           OnActionExecuted   - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - After Execution 
+INFO  2017-01-09 09:38:07,257 50549ms LogAttribute           OnActionExecuting  - Info message - buddhika2006system@gmail.com user, executed User controllers 's Index action method, log message - On Executing 
+INFO  2017-01-09 09:38:07,258 50550ms LogAttribute           OnActionExecuted   - Info message - buddhika2006system@gmail.com user, executed User controllers 's Index action method, log message - After Execution 
+INFO  2017-01-09 09:38:07,264 50556ms LogAttribute           OnActionExecuting  - Info message - buddhika2006system@gmail.com user, executed Admin controllers 's Dashboard action method, log message - On Executing 
+INFO  2017-01-09 09:38:07,264 50556ms LogAttribute           OnActionExecuted   - Info message - buddhika2006system@gmail.com user, executed Admin controllers 's Dashboard action method, log message - After Execution 
