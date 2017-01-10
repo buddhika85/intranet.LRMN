@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ViewModels.FormViewModels
+namespace Persistance.ViewModels
 {
 
     public class SendCodeViewModel

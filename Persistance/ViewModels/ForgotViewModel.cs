@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ViewModels.FormViewModels
+namespace Persistance.ViewModels
 {
-    public class ExternalLoginConfirmationViewModel
+
+    public class ForgotViewModel
     {
         [Required]
         [Display(Name = "Email")]

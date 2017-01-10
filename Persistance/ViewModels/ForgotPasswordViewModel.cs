@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ViewModels.FormViewModels
+namespace Persistance.ViewModels
 {
 
     public class ForgotPasswordViewModel

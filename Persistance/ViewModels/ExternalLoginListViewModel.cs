@@ -1,4 +1,4 @@
-﻿namespace ViewModels.FormViewModels
+﻿namespace Persistance.ViewModels
 {
 
     public class ExternalLoginListViewModel

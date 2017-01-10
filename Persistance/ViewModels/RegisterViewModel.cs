@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Util;
 
-namespace ViewModels.FormViewModels
+namespace Persistance.ViewModels
 {
 
     public class RegisterViewModel

@@ -320,10 +320,6 @@
       <Project>{B6B1A2BA-72C9-4351-8105-3BCD6CB541F8}</Project>
       <Name>Util</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ViewModels\ViewModels.csproj">
-      <Project>{C49D3DDF-15AF-4629-B340-BA5DFB7FAA90}</Project>
-      <Name>ViewModels</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
