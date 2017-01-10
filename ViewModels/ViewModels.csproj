@@ -102,6 +102,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormViewModels\ApplicationUserViewModel.cs" />
     <Compile Include="FormViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="FormViewModels\ExternalLoginListViewModel.cs" />
     <Compile Include="FormViewModels\ForgotPasswordViewModel.cs" />
@@ -114,9 +115,7 @@
     <Compile Include="FormViewModels\VerifyCodeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dtos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
