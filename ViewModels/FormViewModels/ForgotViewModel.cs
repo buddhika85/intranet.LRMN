@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MvcClient.Models
+namespace ViewModels.FormViewModels
 {
 
     public class ForgotViewModel

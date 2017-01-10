@@ -1,4 +1,4 @@
-﻿namespace MvcClient.Models
+﻿namespace ViewModels.FormViewModels
 {
 
     public class ExternalLoginListViewModel

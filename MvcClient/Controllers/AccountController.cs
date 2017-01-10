@@ -3,7 +3,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using MvcClient.Models;
 using Persistance;
 using Persistance.DomainModel;
 using System;
@@ -12,6 +11,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Util;
+using ViewModels.FormViewModels;
 
 namespace MvcClient.Controllers
 {
@@ -85,29 +85,15 @@ namespace MvcClient.Controllers
             {
                 case SignInStatus.Success:
                     {
+                        UpdateLastLoginAttemptTime();
                         return RedirectToAction("Index", "User");
-                        //return RedirectToLocal(returnUrl);
-                        //if (User.IsInRole("Admin"))
-                        //{
-                        //    return RedirectToAction("Dashboard", "Admin");
-                        //}
-                        //else if (User.IsInRole("ProjectOwner"))
-                        //{
-                        //    return RedirectToAction("Dashboard", "ProjectOwner");
-                        //}
-                        //else if (User.IsInRole("Contact"))
-                        //{
-                        //    return RedirectToAction("Dashboard", "Contact");
-                        //}
-                        //else
-                        //{
-                        //    ModelState.AddModelError("", "Invalid login attempt - User does not have a role - Contact LRMN Admin");
-                        //    return View(model);
-                        //}
                     }
 
                 case SignInStatus.LockedOut:
-                    return View("Lockout");
+                    {
+                        UpdateLastLoginAttemptTime();
+                        return View("Lockout");
+                    }
                 case SignInStatus.RequiresVerification:
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
@@ -115,6 +101,13 @@ namespace MvcClient.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+        }
+
+        private void UpdateLastLoginAttemptTime()
+        {
+            var userId = User.Identity.GetUserId();
+            _uow.ApplicationUserRepository.GetByPrimaryKey(userId).LastLoginDateTime = DateTime.Now;
+            _uow.Save();
         }
 
         //

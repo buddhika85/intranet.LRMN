@@ -54,9 +54,10 @@ namespace Persistance.DomainModel
         // Foriegn key
         public int ContactTypeId { get; set; }
 
+        public DateTime? LastLoginDateTime { get; set; }
+
         // Navigational Property
         public ContactType ContactType { get; set; }
-
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

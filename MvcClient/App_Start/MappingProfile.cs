@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using MvcClient.Models;
 using Persistance.DomainModel;
+using ViewModels.FormViewModels;
 
 namespace MvcClient.App_Start
 {

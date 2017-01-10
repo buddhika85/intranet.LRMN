@@ -10,3 +10,11 @@ INFO  2017-01-09 09:38:07,257 50549ms LogAttribute           OnActionExecuting  
 INFO  2017-01-09 09:38:07,258 50550ms LogAttribute           OnActionExecuted   - Info message - buddhika2006system@gmail.com user, executed User controllers 's Index action method, log message - After Execution 
 INFO  2017-01-09 09:38:07,264 50556ms LogAttribute           OnActionExecuting  - Info message - buddhika2006system@gmail.com user, executed Admin controllers 's Dashboard action method, log message - On Executing 
 INFO  2017-01-09 09:38:07,264 50556ms LogAttribute           OnActionExecuted   - Info message - buddhika2006system@gmail.com user, executed Admin controllers 's Dashboard action method, log message - After Execution 
+INFO  2017-01-10 08:31:41,981  1619ms MvcLogger              ngLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - On Executing 
+INFO  2017-01-10 08:31:42,308  1946ms MvcLogger              edLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - After Execution 
+INFO  2017-01-10 08:32:10,757 30395ms MvcLogger              ngLoggerAnonymouse - Info message - Anonymouse user, executed Admin controllers 's Dashboard action method, log message - On Executing 
+INFO  2017-01-10 08:32:10,759 30397ms MvcLogger              edLoggerAnonymouse - Info message - Anonymouse user, executed Admin controllers 's Dashboard action method, log message - After Execution 
+INFO  2017-01-10 08:32:30,124 49762ms MvcLogger              ngLoggerAnonymouse - Info message - Anonymouse user, executed Admin controllers 's ManageContacts action method, log message - On Executing 
+INFO  2017-01-10 08:32:54,878 74516ms MvcLogger              edLoggerAnonymouse - Info message - Anonymouse user, executed Admin controllers 's ManageContacts action method, log message - After Execution 
+INFO  2017-01-10 09:04:54,502   423ms MvcLogger              ngLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - On Executing 
+INFO  2017-01-10 09:04:54,543   465ms MvcLogger              edLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - After Execution 

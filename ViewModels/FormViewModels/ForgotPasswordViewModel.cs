@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MvcClient.Models
+namespace ViewModels.FormViewModels
 {
-    public class ExternalLoginConfirmationViewModel
+
+    public class ForgotPasswordViewModel
     {
         [Required]
+        [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }

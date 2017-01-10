@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Persistance
 {
@@ -32,6 +34,27 @@ namespace Persistance
         public virtual TEntity GetByPrimaryKey(object primaryKey)
         {
             return dbSet.Find(primaryKey);
+        }
+
+        // For eager loading
+        // https://www.codeproject.com/Articles/94781/Eager-Loading-with-Repository-Pattern-and-Entity-F
+        public IEnumerable<TEntity> Query(Expression<Func<TEntity, bool>> filter)
+        {
+            return dbSet.Where(filter);
+        }
+
+        // For eager loading 
+        // https://www.codeproject.com/Articles/94781/Eager-Loading-with-Repository-Pattern-and-Entity-F
+        public IEnumerable<TEntity> QueryObjectGraph(Expression<Func<TEntity, bool>> filter, string children)
+        {
+            return dbSet.Include(children).Where(filter);
+        }
+
+        // For eager loading 
+        // https://www.codeproject.com/Articles/94781/Eager-Loading-with-Repository-Pattern-and-Entity-F
+        public IEnumerable<TEntity> QueryObjectGraph(string children)
+        {
+            return dbSet.Include(children);
         }
 
         // insert

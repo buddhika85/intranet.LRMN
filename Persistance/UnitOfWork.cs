@@ -33,7 +33,8 @@ namespace Persistance
         #region REPOSITORIES
 
         // all the table/entity specific repositories as instances       
-        private GenericRepository<ContactType> contactTypeRepository;
+        GenericRepository<ContactType> contactTypeRepository;
+        GenericRepository<ApplicationUser> applicationUserRepository;
 
         // add more repositories below
         // ...
@@ -49,6 +50,17 @@ namespace Persistance
                     contactTypeRepository = new GenericRepository<ContactType>(_context);
                 }
                 return contactTypeRepository;
+            }
+        }
+        public GenericRepository<ApplicationUser> ApplicationUserRepository
+        {
+            get
+            {
+                if (applicationUserRepository == null)
+                {
+                    applicationUserRepository = new GenericRepository<ApplicationUser>(_context);
+                }
+                return applicationUserRepository;
             }
         }
         // add more repositories below
