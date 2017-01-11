@@ -10,7 +10,7 @@ namespace MvcClient.Filters
 
         public LogAttribute()
         {
-            _mvcLogger = new MvcLogger();
+            _mvcLogger = new MvcLogger(log4net.LogManager.GetLogger(typeof(LogAttribute)));
         }
 
         public override void OnActionExecuted(ActionExecutedContext filterContext)

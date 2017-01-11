@@ -2,6 +2,7 @@
 using Persistance;
 using System;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace MvcClient.Controllers
@@ -14,7 +15,7 @@ namespace MvcClient.Controllers
         public AdminController()
         {
             _uow = new UnitOfWork();
-            _mvcLogger = new MvcLogger();
+            _mvcLogger = new MvcLogger(log4net.LogManager.GetLogger(typeof(AdminController)));
         }
 
         // GET: Admin
@@ -22,12 +23,13 @@ namespace MvcClient.Controllers
         {
             try
             {
-                return View();
+                //return View();
+                throw new Exception("exception thrown");
             }
             catch (Exception ex)
             {
                 _mvcLogger.LogException(ex, ControllerContext, User.Identity.Name);
-                throw;
+                throw new HttpException(500, "Error - Dashboard did not get loaded - Contact IT Support");
             }
         }
 
@@ -41,7 +43,7 @@ namespace MvcClient.Controllers
             catch (Exception ex)
             {
                 _mvcLogger.LogException(ex, ControllerContext, User.Identity.Name);
-                throw;
+                throw new HttpException(500, "Error - ManageContacts page did not get loaded - Contact IT Support");
             }
         }
 
@@ -55,7 +57,7 @@ namespace MvcClient.Controllers
             catch (Exception ex)
             {
                 _mvcLogger.LogException(ex, ControllerContext, User.Identity.Name);
-                throw;
+                throw new HttpException(500, "Error - ManagePartnerContacts page did not get loaded - Contact IT Support");
             }
         }
 

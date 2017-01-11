@@ -5,13 +5,13 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Persistance;
 using Persistance.DomainModel;
+using Persistance.ViewModels;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Util;
-using Persistance.ViewModels;
 
 namespace MvcClient.Controllers
 {
@@ -85,13 +85,13 @@ namespace MvcClient.Controllers
             {
                 case SignInStatus.Success:
                     {
-                        UpdateLastLoginAttemptTime();
+                        UpdateLastLoginAttemptTime(model.Email);
                         return RedirectToAction("Index", "User");
                     }
 
                 case SignInStatus.LockedOut:
                     {
-                        UpdateLastLoginAttemptTime();
+                        UpdateLastLoginAttemptTime(model.Email);
                         return View("Lockout");
                     }
                 case SignInStatus.RequiresVerification:
@@ -103,11 +103,11 @@ namespace MvcClient.Controllers
             }
         }
 
-        private void UpdateLastLoginAttemptTime()
+        private void UpdateLastLoginAttemptTime(string email)
         {
-            var userId = User.Identity.GetUserId();
-            _uow.ApplicationUserRepository.GetByPrimaryKey(userId).LastLoginDateTime = DateTime.Now;
-            _uow.Save();
+            var user = UserManager.FindByEmail(email);
+            user.LastLoginDateTime = DateTime.Now;
+            UserManager.Update(user);
         }
 
         //

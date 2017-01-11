@@ -1,6 +1,7 @@
 ﻿using log4net;
 using Microsoft.AspNet.Identity;
 using System;
+using System.Web.Http.Controllers;
 using System.Web.Mvc;
 using Util;
 
@@ -10,9 +11,9 @@ namespace MvcClient.Logger
     {
         ILog _log;
 
-        internal MvcLogger()
+        internal MvcLogger(ILog log)
         {
-            _log = log4net.LogManager.GetLogger(typeof(MvcLogger));
+            _log = log;
         }
 
         // log exceptions in action methods
@@ -22,6 +23,15 @@ namespace MvcClient.Logger
                                         username,
                                         controllerContext.RouteData.Values["controller"].ToString(),
                                         controllerContext.RouteData.Values["action"].ToString(),
+                                        ex));
+        }
+
+        internal void LogException(Exception ex, HttpControllerContext controllerContext, string action, string username)
+        {
+            _log.Error("Error message - " + LogMessageGenerator.GenerateLogMessage(
+                                        username,
+                                        controllerContext.RouteData.Values["controller"].ToString(),
+                                        action,
                                         ex));
         }
 
