@@ -25,6 +25,7 @@ namespace Persistance.ViewModels
         public string VolunteerInterests { get; set; }
         public DateTime? LastLoginDateTime { get; set; }
         public int ContactTypeId { get; set; }
+        public string ContactType { get; set; }
         public string RoleId { get; set; }
         public string RoleName { get; set; }
     }

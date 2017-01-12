@@ -35,5 +35,23 @@ namespace MvcClient.Controllers.API
                 throw;
             }
         }
+
+
+        [HttpGet]
+        public IHttpActionResult Get(int id)
+        {
+            try
+            {
+                var result = _uow.ApplicationUserRepository.SQLQuery<ApplicationUserViewModel>(
+                    sql: "usp_GetApplicationUsers", parameters: null);
+                var contact = result.Where(u => u.UserIdGenerated == id).Single();
+                return Ok(contact);
+            }
+            catch (Exception ex)
+            {
+                _mvcLogger.LogException(ex, ControllerContext, nameof(Get), User.Identity.Name);
+                throw;
+            }
+        }
     }
 }
