@@ -7,6 +7,7 @@ namespace Util
         // Generate information based log messages
         public static string GenerateLogMessage(string username, string controller, string action, string message = "no message")
         {
+
             return string.Format("{0} user, executed {1} controllers 's {2} action method, log message - {3} ",
                 username, controller, action, message);
         }

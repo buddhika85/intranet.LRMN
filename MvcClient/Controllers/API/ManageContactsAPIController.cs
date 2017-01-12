@@ -1,6 +1,9 @@
 ﻿using MvcClient.Logger;
 using Persistance;
+using Persistance.ViewModels;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 
 namespace MvcClient.Controllers.API
@@ -21,12 +24,15 @@ namespace MvcClient.Controllers.API
         {
             try
             {
-                throw new Exception("exception thrown");
+                var result = _uow.ApplicationUserRepository.SQLQuery<ApplicationUserViewModel>(
+                    sql: "usp_GetApplicationUsers", parameters: null);
+                IList<ApplicationUserViewModel> contacts = result.ToList();
+                return Ok(contacts);
             }
             catch (Exception ex)
             {
                 _mvcLogger.LogException(ex, ControllerContext, nameof(Get), User.Identity.Name);
-                throw ex;
+                throw;
             }
         }
     }

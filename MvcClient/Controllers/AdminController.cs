@@ -1,7 +1,6 @@
 ﻿using MvcClient.Logger;
 using Persistance;
 using System;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -33,12 +32,13 @@ namespace MvcClient.Controllers
             }
         }
 
+        [HttpGet]
         public ActionResult ManageContacts()
         {
             try
             {
-                var applicationUsers = _uow.ApplicationUserRepository.QueryObjectGraph("ContactType").ToList();
-                return View(applicationUsers);
+                //var applicationUsers = _uow.ApplicationUserRepository.QueryObjectGraph("ContactType").ToList();
+                return View();
             }
             catch (Exception ex)
             {
