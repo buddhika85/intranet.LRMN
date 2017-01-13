@@ -4,7 +4,6 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Claims;
 using System.Threading.Tasks;
-//using System.Data.Entity;
 
 namespace Persistance.DomainModel
 {
@@ -50,6 +49,7 @@ namespace Persistance.DomainModel
 
 
         public string VolunteerInterests { get; set; }
+        public string PhoneNumber { get; set; }
 
         // Foriegn key
         public int ContactTypeId { get; set; }

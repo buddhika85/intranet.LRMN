@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MvcClient.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         UnitOfWork _uow;

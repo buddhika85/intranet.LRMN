@@ -175,3 +175,13 @@ INFO  2017-01-12 12:24:57,485 735291ms LogAttribute           ngLoggerAnonymouse
 INFO  2017-01-12 12:24:57,490 735296ms LogAttribute           edLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Login action method, log message - After Execution 
 INFO  2017-01-12 12:25:04,122 741928ms LogAttribute           ngLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - On Executing 
 INFO  2017-01-12 12:25:04,156 741962ms LogAttribute           edLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - After Execution 
+INFO  2017-01-13 08:44:49,363  9458ms LogAttribute           ngLoggerAnonymouse - Info message - Anonymouse user, executed Admin controllers 's ManageContacts action method, log message - On Executing 
+INFO  2017-01-13 08:44:49,619  9714ms LogAttribute           edLoggerAnonymouse - Info message - Anonymouse user, executed Admin controllers 's ManageContacts action method, log message - After Execution 
+INFO  2017-01-13 08:57:39,271   385ms LogAttribute           ngLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - On Executing 
+INFO  2017-01-13 08:57:40,067  1181ms LogAttribute           edLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - After Execution 
+INFO  2017-01-13 09:04:23,603   457ms LogAttribute           ngLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - On Executing 
+INFO  2017-01-13 09:04:25,837  2690ms LogAttribute           edLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - After Execution 
+INFO  2017-01-13 09:06:03,189 100042ms LogAttribute           ngLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - On Executing 
+INFO  2017-01-13 09:06:03,863 100717ms LogAttribute           edLoggerAnonymouse - Info message - Anonymouse user, executed Account controllers 's Register action method, log message - After Execution 
+INFO  2017-01-13 09:06:03,899 100753ms LogAttribute           ngLoggerAnonymouse - Info message - Anonymouse user, executed Home controllers 's RegistrationComplete action method, log message - On Executing 
+INFO  2017-01-13 09:06:03,900 100754ms LogAttribute           edLoggerAnonymouse - Info message - Anonymouse user, executed Home controllers 's RegistrationComplete action method, log message - After Execution 

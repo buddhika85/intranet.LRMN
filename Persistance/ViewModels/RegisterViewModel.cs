@@ -66,12 +66,18 @@ namespace Persistance.ViewModels
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 5)]
         public string Postcode { get; set; }
 
+        [Required(ErrorMessage = "Please insert your phone number.")]
+        [StringLength(20, ErrorMessage = "The {0} number must be at least {2} characters long.", MinimumLength = 8)]
+        [Display(Name = "Telephone")]
+        public string PhoneNumber { get; set; }
+
         [Display(Name = "Your volunteer intrests")]
         public string VolunteerInterests { get; set; }
 
         [Required(ErrorMessage = "Please select a contact type.")]
         [Display(Name = "Contact Type")]
         public int ContactTypeId { get; set; }
+
 
         public IEnumerable<ContactType> ContactTypes { get; set; }
     }
