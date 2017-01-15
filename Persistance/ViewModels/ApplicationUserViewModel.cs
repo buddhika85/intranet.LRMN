@@ -11,9 +11,12 @@ namespace Persistance.ViewModels
         public int AccessFailedCount { get; set; }
         public string UserName { get; set; }
         public string FirstName { get; set; }
+
+        public string FullName { get; set; }
         public string LastName { get; set; }
         public DateTime JoinDate { get; set; }
         public DateTime? ContractEndDate { get; set; }
+        public bool IsAdminApproved { get; set; }
         public bool UserActive { get; set; }
         public bool UserLocked { get; set; }
         public string AddressLine1 { get; set; }

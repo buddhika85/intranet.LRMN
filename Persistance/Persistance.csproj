@@ -118,6 +118,10 @@
     <Compile Include="DomainModel\ContactType.cs" />
     <Compile Include="DomainModel\UserLogs.cs" />
     <Compile Include="ExecuteStoredProcedurescs.cs" />
+    <Compile Include="Migrations\201701150335339_AddIsAdminApprovedAppUser.cs" />
+    <Compile Include="Migrations\201701150335339_AddIsAdminApprovedAppUser.Designer.cs">
+      <DependentUpon>201701150335339_AddIsAdminApprovedAppUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\AddPhoneNumberViewModel.cs" />
     <Compile Include="ViewModels\ApplicationUserViewModel.cs" />
     <Compile Include="ViewModels\ChangePasswordViewModel.cs" />
@@ -180,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701100336133_LastLoginDetailsForAppUser.resx">
       <DependentUpon>201701100336133_LastLoginDetailsForAppUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701150335339_AddIsAdminApprovedAppUser.resx">
+      <DependentUpon>201701150335339_AddIsAdminApprovedAppUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

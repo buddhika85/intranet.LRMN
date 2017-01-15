@@ -24,6 +24,11 @@ namespace MvcClient.Controllers
         {
             try
             {
+                // get unarroved user accounts for review
+                // get locked user accounts for review
+                // unapproved project create requests
+                // unapproved project completion requests
+
                 return View();
             }
             catch (Exception ex)

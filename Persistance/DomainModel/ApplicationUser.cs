@@ -27,6 +27,8 @@ namespace Persistance.DomainModel
 
         public bool UserActive { get; set; }
 
+        public bool IsAdminApproved { get; set; }
+
         public bool UserLocked { get; set; }
 
 

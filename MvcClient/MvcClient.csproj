@@ -359,6 +359,7 @@
     <Content Include="Content\DataTables\css\common.scss" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\CustomJs\globalJsFunctions.js" />
+    <Content Include="Scripts\CustomJs\manageContacts.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
     <Content Include="Scripts\DataTables\autoFill.foundation.js" />

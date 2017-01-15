@@ -1,102 +1,97 @@
-﻿@model IEnumerable<Persistance.DomainModel.ApplicationUser>
+﻿@model Persistance.ViewModels.ApplicationUserViewModel
 @{
     ViewBag.Title = "ManageContacts";
 }
 
 <h2>Manage Contacts</h2>
-<table id="contactsTbl" class="table table-bordered table-responsive"></table>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <strong>User search</strong>
+        </div>
+        <div class="panel-body">
+            <div class="row rowBottomPadding">
+                <div class="col-md-6">
+                    <label class="col-md-4 normalLabelFont">First name</label>
+                    <input type="text" class="col-md-4 form-control" id="firstName" />
+                </div>
+                <div class="col-md-6">
+                    <label class="col-md-4 normalLabelFont">Last name</label>
+                    <input type="text" class="col-md-4 form-control" id="lastName" />
+                </div>
+            </div>
+            <div class="row rowBottomPadding">
+                <div class="col-md-6">
+                    <label class="col-md-4 normalLabelFont">Email</label>
+                    <input type="text" class="col-md-4 form-control" id="email" />
+                </div>
+                <div class="col-md-6">
+                    <label class="col-md-4 normalLabelFont">Approved</label>
+                    <select id="isApproved" class="form-control">
+                        <option>--- select ---</option>
+                        <option value="true">Approved</option>
+                        <option value="false">Un Approved</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row rowBottomPadding">
+                <div class="col-md-6">
+                    <label class="col-md-4 normalLabelFont">Locked</label>
+                    <select id="isLocked" class="form-control">
+                        <option>--- select ---</option>
+                        <option value="false">No</option>
+                        <option value="true">Yes</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="col-md-4 normalLabelFont">Activated</label>
+                    <select id="isActivated" class="form-control">
+                        <option>--- select ---</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row rowBottomPadding">
+                <div class="col-md-6">
+                    <label class="col-md-4 normalLabelFont">Contract Type</label>
+                    <select id="isLocked" class="form-control">
+                        <option>--- select ---</option>
+                        <option value="false">.</option>
+                        <option value="true">..</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="col-md-4 normalLabelFont">Volunteer Interests</label>
+                    <textarea id="volunteerInerests" class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="row rowBottomPadding formButtonPadding">
+                    <button type="button" class="btn btn-primary">Search</button>
+                    <button type="reset" class="btn">Reset</button>
+            </div>
+
+        </div>
+    </div>
+}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>User Search Results</strong>
+    </div>
+    <div style="padding:1% 1% 1% 1%">
+        <table id="contactsTbl" class="table table-responsive"></table>
+    </div>
+</div>
 
 @section scripts {
 
-    <script type="text/javascript">
-
-        $(document).ready(function () {            
-            $.ajax({
-                url: '/API/ManageContactsAPI',
-                method: 'GET',
-                data: null,
-                cache: false,
-                async: false,
-                success: function (result) {                    
-                    drawContactsTable(result);
-                },
-                error: function (XMLHttpRequest, textStatus, errorThrown) {                    
-                    bootbox.alert({
-                        title: "<span class='text-danger'><strong>Error</strong></span>",
-                        message: "Unabled to retrieve contacts" + " - Please contact IT support"
-                    });                                   
-                }
-            });
-
-        });
-
-        // draw data table
-        function drawContactsTable(contacts) {
-            $("#contactsTbl").dataTable(
-                {
-                    "data": contacts,
-                    "aoColumns": [
-                            { "mData": "UserIdGenerated", "sTitle": "ID", "bVisible": false },
-                            { "mData": "UserId", "sTitle": "UserId", "bVisible": false },
-                            { "mData": "Email", "sTitle": "Username", "bVisible": true },
-                            { "mData": "FirstName", "sTitle": "First Name", "bVisible": true },
-                            { "mData": "LastName", "sTitle": "Last Name", "bVisible": true },
-                            { "mData": "PhoneNumber", "sTitle": "Phone", "bVisible": true },
-                            { "mData": "JoinDate", "sTitle": "Joined", "bVisible": false },
-                            { "mData": "ContractEndDate", "sTitle": "Contract Ends", "bVisible": false },
-                            {
-                                "mData": "UserActive", "sTitle": "Activated?", "bVisible": true, "sClass": "right", "mRender": function (data, type, row) {
-                                    if (data == true) {
-                                        return '<div style="background-color:lightgreen; text-align:center">active</div> ';
-                                    }
-                                    else {
-                                        return '<div style="background-color:darkorange; text-align:center">INACTIVE</div> ';
-                                    }
-                                },
-                                "aTargets": [0]
-                            },
-                            {
-                                "mData": "UserLocked", "sTitle": "Locked", "bVisible": true, "sClass": "right", "mRender": function (data, type, row) {
-                                    if (data == false) {
-                                        return "<button class='lockContact' class='btn-sm btn-danger' style='width:75%;background-color: #ff4d4d; 'data-contact-id=" + row.UserId + "> Lock </button>";
-                                    }
-                                    else {
-                                        return "<button class='unlockContact' class='btn-sm btn-info' style='width:75%;background-color: #668cff; 'data-contact-id=" + row.UserId + ">Unlock</button>";
-                                    }
-                                },
-                                "aTargets": [0]
-                            },
-                            { "mData": "RoleName", "sTitle": "Role", "bVisible": true },
-                            { "mData": "ContactType", "sTitle": "Contact Type", "bVisible": true },
-                            { "mData": "AccessFailedCount", "sTitle": "Access Failed Count", "bVisible": false },
-                            {
-                                "sTitle": "Edit", "mRender": function (data, type, row) {
-                                    return "<button class='editContact' data-contact-id=" + row.UserId + "><span class='glyphicon glyphicon-edit'></span></button>";
-                                },
-                                "aTargets": [0]
-                            },
-                    ],
-                    "bDestroy": true,
-                    "aLengthMenu": [[15, 50, 100, 200, 500, 700, 1000, -1], [15, 50, 100, 200, 500, 700, 1000, "All"]],
-                    "iDisplayLength": -1
-                }
-            );
-        }
-
-        $("#contactsTbl").on("click", ".editContact", function () {
-            var button = $(this);
-            alert(button.attr('data-contact-id'));
-        });
-
-        $("#contactsTbl").on("click", ".lockContact", function () {
-            var button = $(this);
-            alert(button.attr('data-contact-id'));
-        });
-
-        $("#contactsTbl").on("click", ".unlockContact", function () {
-            var button = $(this);
-            alert(button.attr('data-contact-id'));
-        });
-    </script>
+    <script src="~/Scripts/CustomJs/manageContacts.js"></script>
 }
 

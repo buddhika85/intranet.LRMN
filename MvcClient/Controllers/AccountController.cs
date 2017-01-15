@@ -181,6 +181,7 @@ namespace MvcClient.Controllers
                 user.JoinDate = DateTime.Today;
                 //user.JoinTime = DateTime.Now.TimeOfDay;                user.UserLocked = false;
                 user.UserActive = false;
+                user.IsAdminApproved = false;
 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

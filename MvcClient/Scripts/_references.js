@@ -3,6 +3,7 @@
 /// <reference path="bootbox.min.js" />
 /// <reference path="bootstrap.js" />
 /// <reference path="customjs/globaljsfunctions.js" />
+/// <reference path="customjs/managecontacts.js" />
 /// <reference path="datatables/autofill.bootstrap.min.js" />
 /// <reference path="datatables/autofill.foundation.min.js" />
 /// <reference path="datatables/autofill.jqueryui.min.js" />

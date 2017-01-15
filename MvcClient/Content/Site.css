@@ -85,3 +85,16 @@ h6,
 .input-validation-error {
     border: 1px solid #b94a48;
 }
+
+.normalLabelFont {
+    font-weight:400;
+}
+
+.rowBottomPadding
+{
+    padding-bottom:1%;
+}
+
+.formButtonPadding {
+    padding-left:82%;
+}
