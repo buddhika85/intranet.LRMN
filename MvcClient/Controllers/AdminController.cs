@@ -7,6 +7,7 @@ using System.Web.Mvc;
 namespace MvcClient.Controllers
 {
     [Authorize]
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         UnitOfWork _uow;
@@ -23,8 +24,7 @@ namespace MvcClient.Controllers
         {
             try
             {
-                //return View();
-                throw new Exception("exception thrown");
+                return View();
             }
             catch (Exception ex)
             {

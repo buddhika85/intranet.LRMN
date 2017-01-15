@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace MvcClient.Controllers.API
 {
+    [Authorize(Roles = "Admin")]
     public class ManageContactsAPIController : ApiController
     {
         UnitOfWork _uow;
@@ -44,7 +45,7 @@ namespace MvcClient.Controllers.API
             {
                 var result = _uow.ApplicationUserRepository.SQLQuery<ApplicationUserViewModel>(
                     sql: "usp_GetApplicationUsers", parameters: null);
-                var contact = result.Where(u => u.UserIdGenerated == id).Single();
+                var contact = result.Single(u => u.UserIdGenerated == id);
                 return Ok(contact);
             }
             catch (Exception ex)
