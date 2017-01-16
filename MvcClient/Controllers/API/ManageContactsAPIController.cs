@@ -86,19 +86,19 @@ namespace MvcClient.Controllers.API
                 if (contactsSearchDto.Email != null)
                     contacts = from u in contacts where u.FirstName.Contains(contactsSearchDto.Email) select u;
 
-                if (contactsSearchDto.IsApproved != "-1" && contactsSearchDto.IsApproved != "0")
+                if (contactsSearchDto.IsApproved != "-1" && contactsSearchDto.IsApproved == "0")
                     contacts = from u in contacts where (u.IsAdminApproved == false) select u;
-                if (contactsSearchDto.IsApproved != "-1" && contactsSearchDto.IsApproved != "1")
+                if (contactsSearchDto.IsApproved != "-1" && contactsSearchDto.IsApproved == "1")
                     contacts = from u in contacts where (u.IsAdminApproved == true) select u;
 
-                if (contactsSearchDto.IsLocked != "-1" && contactsSearchDto.IsLocked != "0")
+                if (contactsSearchDto.IsLocked != "-1" && contactsSearchDto.IsLocked == "0")
                     contacts = from u in contacts where (u.UserLocked == false) select u;
-                if (contactsSearchDto.IsLocked != "-1" && contactsSearchDto.IsLocked != "1")
+                if (contactsSearchDto.IsLocked != "-1" && contactsSearchDto.IsLocked == "1")
                     contacts = from u in contacts where (u.UserLocked == true) select u;
 
-                if (contactsSearchDto.IsActivated != "-1" && contactsSearchDto.IsActivated != "0")
+                if (contactsSearchDto.IsActivated != "-1" && contactsSearchDto.IsActivated == "0")
                     contacts = from u in contacts where (u.UserActive == false) select u;
-                if (contactsSearchDto.IsActivated != "-1" && contactsSearchDto.IsActivated != "1")
+                if (contactsSearchDto.IsActivated != "-1" && contactsSearchDto.IsActivated == "1")
                     contacts = from u in contacts where (u.UserActive == true) select u;
 
                 if (contactsSearchDto.ContactTypeId != -1)
