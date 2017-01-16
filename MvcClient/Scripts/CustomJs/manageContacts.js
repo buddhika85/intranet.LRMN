@@ -3,6 +3,12 @@
     "use strict";
 
     $(document).ready(function () {
+        loadContactsGrid();
+        loadContactTypesSelect();
+    });
+
+    function loadContactsGrid()
+    {
         $.ajax({
             url: '/API/ManageContactsAPI',
             method: 'GET',
@@ -19,8 +25,69 @@
                 });
             }
         });
+    }
 
+    // load contact types select list
+    function loadContactTypesSelect() {
+        $.ajax({
+            url: '/API/ContactTypeAPI',
+            method: 'GET',
+            data: null,
+            cache: false,
+            async: false,
+            success: function (result) {                
+                var listitems = '<option value=-1 selected="selected">--- select ---</option>';
+                $.each(result, function (index, item) {
+                    listitems += '<option value=' + item.Id + '>' + item.TypeName + '</option>';
+                });
+                $("#contactTypeId option").remove();
+                $("#contactTypeId").append(listitems);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                bootbox.alert({
+                    title: "<span class='text-danger'><strong>Error</strong></span>",
+                    message: "Unabled to retrieve contact types" + " - Please contact IT support"
+                });
+            }
+        });
+    }
+
+
+    // search
+    $('#searchContact').click(function () {
+        var contactsSearchDto = getSearchFormInputs();
+        $.ajax({
+            url: '/API/ManageContactsAPI',
+            method: 'POST',
+            data: contactsSearchDto,
+            cache: false,
+            async: false,
+            success: function (result) {
+                drawContactsTable(result);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                bootbox.alert({
+                    title: "<span class='text-danger'><strong>Error</strong></span>",
+                    message: "Unabled to search contacts" + " - Please contact IT support"
+                });
+            }
+        });
     });
+
+    // search inputs as a json object
+    function getSearchFormInputs()
+    {
+        return {
+            'FirstName': $('#firstName').val(),
+            'LastName': $('#lastName').val(),
+            'Email': $('#email').val(),
+            'IsApproved': $('#isApproved').val(),
+            'IsLocked': $('#isLocked').val(),
+            'IsActivated': $('#isActivated').val(),
+            'ContactTypeId': $('#contactTypeId').val(),
+            'VolunteerInerests': $('#volunteerInerests').val()
+        }
+    }
 
     // draw data table
     function drawContactsTable(contacts) {

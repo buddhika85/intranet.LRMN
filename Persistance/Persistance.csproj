@@ -116,7 +116,7 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="DomainModel\ApplicationUser.cs" />
     <Compile Include="DomainModel\ContactType.cs" />
-    <Compile Include="DomainModel\UserLogs.cs" />
+    <Compile Include="Dtos\ContactsSearchDto.cs" />
     <Compile Include="ExecuteStoredProcedurescs.cs" />
     <Compile Include="Migrations\201701150335339_AddIsAdminApprovedAppUser.cs" />
     <Compile Include="Migrations\201701150335339_AddIsAdminApprovedAppUser.Designer.cs">
